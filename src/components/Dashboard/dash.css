@@ -1,0 +1,54 @@
+.quiz_card-main-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 3rem;
+}
+
+.quiz_card-div {
+  width: 20rem;
+  margin: 5rem;
+  border: 1px solid gainsboro;
+  text-align: center;
+}
+
+.quiz_img {
+  width: 100%;
+}
+
+.quiz_tag {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.quiz_desc {
+  margin: 0.5rem 0;
+}
+
+.btn-play-now {
+  padding: 0.6rem 1rem;
+  background-color: white;
+  border: 1px solid gainsboro;
+  cursor: pointer;
+  margin: 1rem 0;
+}
+.btn-play-now:hover {
+  background-color: black;
+  color: white;
+  transition: 0.3s;
+}
+.btn-play-now:active {
+  border: 1px solid black;
+}
+
+@media screen and (max-width: 700px) {
+  .quiz_card-main-div {
+    grid-template-columns: 1fr;
+  }
+
+  .quiz_card-div {
+    width: 15rem;
+    margin: 2.5rem;
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+}

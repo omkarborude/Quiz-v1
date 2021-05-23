@@ -1,0 +1,17 @@
+.score-review-main-div {
+  display: flex;
+}
+
+.scoreboard_card {
+  margin-top: 6rem;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid gainsboro;
+  padding: 20px;
+}
+.answered-review-div {
+  margin-top: 6rem;
+  width: 60%;
+}
