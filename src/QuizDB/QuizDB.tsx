@@ -28,7 +28,7 @@ export type QuizDatabase = Quiz[];
 export const quizdatabase: QuizDatabase = [
   {
     id: uuidv4(),
-    topic: "Friends",
+    topic: "Cricket",
     description: "Let's play Cricket Quiz !",
     playTime: 3,
     image: "https://i.ibb.co/Xt5V8zW/download.jpg",
