@@ -18,3 +18,7 @@
 ![CSS](https://img.shields.io/badge/frontend-css-yellowgreen.svg?logo=css3&style=flat-square)
 ![JavaScript](https://img.shields.io/badge/frontend-javascript-blue.svg?logo=javascript&style=flat-square) 
 ![ReactJS](https://img.shields.io/badge/React-JS-blue) 
+![MongoDB](https://img.shields.io/badge/Backend-Express.JS-%233a86ff) 
+
+- Front End - **HTML**, **CSS** , **ReactJS**
+- Back End  - **MongoDB** , **ExpressJS**
