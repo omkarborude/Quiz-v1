@@ -29,7 +29,7 @@ const getCurrentQuestion = (
   resultArray: Result[],
   quizId: string
 ): Result | null => {
-  const currentQuestion = resultArray.find((result) => result.id === quizId);
+  const currentQuestion = resultArray.find((result) => result._id === quizId);
   return currentQuestion ? currentQuestion : null;
 };
 
@@ -50,7 +50,7 @@ const isRightAnswer = (
   optionId: string,
   quizId: string
 ): boolean => {
-  const currentQuiz = resultArray.find((result) => result.id === quizId);
+  const currentQuiz = resultArray.find((result) => result._id === quizId);
   return currentQuiz?.correctOption === optionId;
 };
 
