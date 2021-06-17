@@ -30,22 +30,26 @@ export const ReviewAnswer = () => {
                     className={`btn-answered  ${
                       styleRightAndWrongAnswers(
                         result.resultArray,
-                        option.id,
-                        quiz.id
+                        option._id,
+                        quiz._id
                       ) &&
                       styleRightAndWrongAnswers(
                         result.resultArray,
-                        option.id,
-                        quiz.id
+                        option._id,
+                        quiz._id
                       )
                     }`}
                   >
                     {isOptionSelected(
                       result.resultArray,
-                      option.id,
-                      quiz.id
+                      option._id,
+                      quiz._id
                     ) ? (
-                      isRightAnswer(result.resultArray, option.id, quiz.id) ? (
+                      isRightAnswer(
+                        result.resultArray,
+                        option._id,
+                        quiz._id
+                      ) ? (
                         <div>
                           <span>{option.text}</span>
                         </div>
