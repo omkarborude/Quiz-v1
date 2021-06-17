@@ -37,7 +37,11 @@
   font-size: 1rem;
   font-weight: 500;
 }
-
+.btn-answer:hover {
+  /* border: 1px solid red; */
+  border: none;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.09), 0 10px 10px rgba(0, 0, 0, 0.09);
+}
 .btn-next-question {
   background-color: white;
   padding: 0.5rem 1.5rem 0.5rem 1.5rem;
@@ -72,5 +76,8 @@
 
   .option_btn {
     margin: 2px;
+  }
+  .question_div-main {
+    width: 90%;
   }
 }

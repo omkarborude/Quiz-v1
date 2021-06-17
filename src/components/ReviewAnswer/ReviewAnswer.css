@@ -28,3 +28,7 @@
   background-color: orangered;
   color: #fff;
 }
+
+/* For Mobile */
+@media only screen and (max-width: 800px) {
+}

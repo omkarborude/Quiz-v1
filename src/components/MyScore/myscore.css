@@ -1,0 +1,73 @@
+.my-scor-card-main-div {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 10%;
+  border: 1px solid gainsboro;
+}
+.my-scor-tag {
+  text-align: center;
+  color: orangered;
+}
+.my-score-info-tag-div {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  border-bottom: 1px solid gainsboro;
+  padding: 1rem;
+}
+.my-score-info-tag {
+  width: 30%;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #70e000;
+  font-weight: 600;
+}
+.my-score-info-score {
+  width: 30%;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #00509d;
+}
+.my-score-info-tag-time {
+  width: 40%;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffd000;
+}
+.myscore-user-score {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+}
+.myscore-quiz {
+  width: 30%;
+  text-align: center;
+  font-weight: 600;
+}
+.myscore-score {
+  width: 30%;
+  text-align: center;
+  font-weight: 600;
+  color: #ff680a;
+  font-size: 1.1rem;
+}
+.myscore-time {
+  width: 40%;
+  text-align: center;
+}
+
+/* for mobile */
+@media only screen and (max-width: 800px) {
+  .my-scor-card-main-div {
+    width: 90%;
+    margin-top: 25%;
+  }
+  .my-score-info-tag-div {
+    width: 90%;
+  }
+  .myscore-user-score {
+    width: 90%;
+  }
+}
