@@ -40,6 +40,45 @@
   border: 1px solid black;
 }
 
+.home-footer-div {
+  align-items: center;
+  /* position: absolute; */
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  height: 5rem;
+  width: 100%;
+  border-top: 1px solid gainsboro;
+  border-bottom: 1px solid gainsboro;
+}
+.home-footer-div b {
+  color: orangered;
+  font-size: 1.1rem;
+}
+.fa-github {
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+}
+.fa-github:hover {
+  cursor: pointer;
+  color: orangered;
+}
+.fa-twitter-square {
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+}
+.fa-twitter-square:hover {
+  cursor: pointer;
+  color: deepskyblue;
+}
+.fa-linkedin {
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+}
+.fa-linkedin:hover {
+  cursor: pointer;
+  color: blue;
+}
 @media screen and (max-width: 700px) {
   .quiz_card-main-div {
     grid-template-columns: 1fr;
