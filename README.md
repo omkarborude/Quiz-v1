@@ -4,6 +4,12 @@
 
 🏆 QuizApp is a free and open-source quiz application that lets you play quizzes right in the browser.
 
+### Demo Credentials
+```
+Email:-    test@gmail.com
+password:- password
+```
+
 ###### **Here is the link to the [live demo](https://quiz-v.herokuapp.com/)**
 
 ## The salient features of the app are:
