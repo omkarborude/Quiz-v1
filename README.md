@@ -22,3 +22,8 @@
 
 - Front End - **HTML**, **CSS** , **ReactJS**
 - Back End  - **MongoDB** , **ExpressJS**
+
+## Connect With Me 
+
+[![Twitter](https://img.shields.io/static/v1.svg?label=connect&message=@omkar_Borude_&color=grey&logo=twitter&style=flat&logoColor=white&colorA=blue)](https://twitter.com/omkar_Borude_)
+[![LinkedIn](https://img.shields.io/static/v1.svg?label=connect&message=@omkar-borude&color=9cf&logo=linkedin&style=flat&logoColor=white&colorA=blue)](https://www.linkedin.com/in/omkar-borude-b4583016b/) 
