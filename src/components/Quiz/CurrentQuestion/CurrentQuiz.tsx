@@ -1,7 +1,8 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
 import { useQuiz } from "../../../QuizContext/QuizContext";
 import { Quiz } from "../../../QuizDB/QuizDB";
+import { Timer } from "../../Timer/Timer";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 import "./CurrentQuiz.css";
 
 type Prop = {
@@ -23,12 +24,12 @@ export const CurrentQuestion = ({ currentQuiz }: Prop) => {
       quizDispatch({
         type: "UPDATE_RESULT",
         payload: {
-          id: currentQuiz.questions[quizState.currentQuestionNumber].id,
+          _id: currentQuiz.questions[quizState.currentQuestionNumber]._id,
           hasTaken: false,
           selectedOption: "",
           correctOption: currentQuiz.questions[
             quizState.currentQuestionNumber
-          ].options.find((option) => option.isRight)?.id,
+          ].options.find((option) => option.isRight)?._id,
         },
       });
     }
@@ -46,11 +47,9 @@ export const CurrentQuestion = ({ currentQuiz }: Prop) => {
       });
     } else {
       quizDispatch({
-        type: "UPDATE_SCORE",
+        type: "DEC_SCORE",
         payload: {
-          points:
-            currentQuiz?.questions[quizState.currentQuestionNumber]
-              .negativePoints,
+          points: 2,
         },
       });
     }
@@ -59,12 +58,12 @@ export const CurrentQuestion = ({ currentQuiz }: Prop) => {
     quizDispatch({
       type: "UPDATE_RESULT",
       payload: {
-        id: currentQuiz.questions[quizState.currentQuestionNumber].id,
+        _id: currentQuiz.questions[quizState.currentQuestionNumber]._id,
         hasTaken: true,
         selectedOption: selectedOption,
         correctOption: currentQuiz.questions[
           quizState.currentQuestionNumber
-        ].options.find((option) => option.isRight)?.id,
+        ].options.find((option) => option.isRight)?._id,
       },
     });
   };
@@ -87,19 +86,23 @@ export const CurrentQuestion = ({ currentQuiz }: Prop) => {
       quizDispatch({
         type: "UPDATE_RESULT",
         payload: {
-          id: currentQuiz.questions[quizState.currentQuestionNumber].id,
+          _id: currentQuiz.questions[quizState.currentQuestionNumber]._id,
           hasTaken: false,
           selectedOption: "",
           correctOption: currentQuiz.questions[
             quizState.currentQuestionNumber
-          ].options.find((option) => option.isRight)?.id,
+          ].options.find((option) => option.isRight)?._id,
         },
       });
     }
   };
+
   return (
     <div className="question_div-main">
-      <div className="question-card-topic">{`${currentQuiz.topic} quiz`}</div>
+      <div className="question-card-topic">
+        {`${currentQuiz.topic} quiz`}
+        {Timer}
+      </div>
 
       <div className="">
         <div className="question-div">
@@ -112,10 +115,10 @@ export const CurrentQuestion = ({ currentQuiz }: Prop) => {
                 <button
                   className={`btn-answer  ${answerSelectionStyle(
                     option.isRight,
-                    option.id
+                    option._id
                   )}`}
-                  key={option.id}
-                  onClick={() => isRightAnswer(option.isRight, option.id)}
+                  key={option._id}
+                  onClick={() => isRightAnswer(option.isRight, option._id)}
                   disabled={disableButtons}
                 >
                   {option.text}
@@ -126,7 +129,7 @@ export const CurrentQuestion = ({ currentQuiz }: Prop) => {
         </div>
       </div>
       {quizState.currentQuestionNumber === currentQuiz.questions.length - 1 ? (
-        <Link to={`/quiz/${currentQuiz.id}/Scoreboard`}>
+        <Link to={`/quiz/${currentQuiz._id}/Scoreboard`}>
           <button className="btn-next-question" onClick={viewScore}>
             Submit !
           </button>
