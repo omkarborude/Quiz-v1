@@ -18,36 +18,15 @@ import {
   serverErrorMessage,
   PrivateRoute,
 } from "./components/index";
+import { getAllData } from "./utils/utils";
 
 export default function App() {
   const { quizState, quizDispatch } = useQuiz();
 
   useEffect(() => {
-    (async (): Promise<ServerData | serverErrorMessage> => {
-      try {
-        toast("Loading Quiz !", {
-          position: "top-right",
-          autoClose: 3000,
-        });
-        const response = await axios.get<ServerData>(
-          `https://neogquizbackend.omkarborude8354.repl.co/quiz/getquiz`
-        );
-        quizDispatch({
-          type: "LOAD_QUIZ",
-          payload: response.data.questionlist,
-        });
-
-        return response.data;
-      } catch (error) {
-        if (axios.isAxiosError(error)) {
-          const serverError = error as AxiosError<serverErrorMessage>;
-          if (serverError && serverError.response)
-            return serverError.response.data;
-        }
-        return { errorMessage: "server down" };
-      }
-    })();
+    getAllData(quizDispatch);
   }, []);
+
   return (
     <div className="App">
       <Navbar />

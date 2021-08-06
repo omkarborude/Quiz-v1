@@ -1,5 +1,8 @@
 import { Result } from "../QuizContext/quizReducer";
 import { Quiz } from "../QuizDB/QuizDB";
+import { ToastContainer, toast } from "react-toastify";
+import { ServerData, serverErrorMessage, useQuiz } from "../components";
+import axios, { AxiosError } from "axios";
 
 const getAttemptedPercentage = (resultArray: Result[]): number => {
   const attemptedQuizArray = resultArray.filter((result) => result.hasTaken);
@@ -71,6 +74,33 @@ const styleRightAndWrongAnswers = (
 
   return "";
 };
+
+export function getAllData(quizDispatch: any) {
+  (async (): Promise<ServerData | serverErrorMessage> => {
+    try {
+      toast("Loading Quiz !", {
+        position: "top-right",
+        autoClose: 3000,
+      });
+      const response = await axios.get<ServerData>(
+        `https://neogquizbackend.omkarborude8354.repl.co/quiz/getquiz`
+      );
+      quizDispatch({
+        type: "LOAD_QUIZ",
+        payload: response.data.questionlist,
+      });
+
+      return response.data;
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        const serverError = error as AxiosError<serverErrorMessage>;
+        if (serverError && serverError.response)
+          return serverError.response.data;
+      }
+      return { errorMessage: "server down" };
+    }
+  })();
+}
 
 export {
   getAttemptedPercentage,

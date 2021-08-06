@@ -1,3 +1,4 @@
+import { LoginGuest } from "./GuestLogin";
 import { useAuth } from "../index";
 import { useState } from "react";
 import "./login.css";
@@ -88,6 +89,7 @@ export const Login = () => {
                 create new account{" "}
               </p>
             </div>
+            <LoginGuest />
           </div>
         </div>
       ) : (
@@ -150,7 +152,7 @@ export const Login = () => {
                 className="login-card-signup"
                 onClick={() => setshowloginsignup(true)}
               >
-                Have an Account Already?{" "}
+                Have an Account Already?
               </p>
             </div>
           </div>{" "}
