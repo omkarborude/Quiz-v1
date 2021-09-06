@@ -1,0 +1,56 @@
+.score-review-main-div {
+  display: flex;
+}
+
+.scoreboard_card {
+  margin-top: 6rem;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid gainsboro;
+  padding: 20px;
+}
+.answered-review-div {
+  margin-top: 6rem;
+  width: 60%;
+}
+.scorecard-submit-btn-div {
+  border-top: 1px solid gainsboro;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+.btn-submit-to-server {
+  padding: 0.8rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  background-color: #3a86ff;
+  color: white;
+  border: 1px solid #3a86ff;
+}
+.btn-submit-to-server:hover {
+  cursor: pointer;
+  background-color: #2195f7;
+  border: 1px solid #2195f7;
+  transition: 0.2s;
+}
+.btn-submit-to-server:active {
+  background-color: #1370f9;
+  border: 1px solid white;
+}
+
+/* for mobile */
+@media only screen and (max-width: 800px) {
+  .score-review-main-div {
+    flex-direction: column;
+  }
+  .scoreboard_card {
+    width: 90%;
+  }
+  .answered-review-div {
+    width: 90%;
+    margin: 0 auto;
+  }
+}

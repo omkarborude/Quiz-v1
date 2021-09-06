@@ -1,0 +1,34 @@
+.review-answer-main-div {
+  width: 80%;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.review-answer-question {
+  border-top: 1px solid gainsboro;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+.btn-answered {
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 0.2rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+.btn-answer-is-right {
+  background-color: green;
+  color: #fff;
+}
+
+.btn-answer-is-wrong {
+  background-color: orangered;
+  color: #fff;
+}
+
+/* For Mobile */
+@media only screen and (max-width: 800px) {
+}

@@ -1,0 +1,48 @@
+.quiz-rules-div {
+  margin: 0 auto;
+  width: 40%;
+  margin-top: 10%;
+  border: 1px solid gainsboro;
+  padding: 1rem;
+}
+.quiz-rules-tag {
+  text-align: center;
+  font-size: 1.5rem;
+  color: orangered;
+}
+
+.quiz-rules-li {
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+.quiz-rules-btn-div {
+  text-align: center;
+}
+.btn-start-quiz-rules {
+  padding: 0.5rem;
+  letter-spacing: 0.15rem;
+  background-color: white;
+  border: 1px solid black;
+  color: orangered;
+  font-weight: 600;
+}
+.btn-start-quiz-rules:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  transition: 0.3s;
+}
+
+/* For Mobile */
+@media only screen and (max-width: 800px) {
+  .quiz-page-main-div {
+    width: 90%;
+    margin-top: 25%;
+  }
+  .quiz-rules-div {
+    width: 100%;
+  }
+  .quiz-question-main-div {
+    width: 100%;
+  }
+}

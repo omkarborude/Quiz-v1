@@ -1,0 +1,70 @@
+.leadboard-card-main-div {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 8%;
+  padding: 1rem;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.09), 0 10px 10px rgba(0, 0, 0, 0.09);
+}
+.leadboard-card-tag {
+  text-align: center;
+}
+.leadboard-info-tag-div {
+  width: 70%;
+  margin: 0 auto;
+  border-bottom: 1px solid gainsboro;
+  display: flex;
+}
+.leadboard-info-tag {
+  width: 35%;
+  text-align: center;
+  font-size: 1.2rem;
+  color: orangered;
+  font-weight: 600;
+}
+.leadboard-info-tag-quiz {
+  width: 35%;
+  text-align: center;
+  font-size: 1.2rem;
+  color: blue;
+  font-weight: 600;
+}
+.leadboard-info-tag-score {
+  width: 35%;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #29bf12;
+}
+.leadboard-user-score {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+}
+.leadboard-username-div {
+  width: 50%;
+  text-align: center;
+}
+.leadboard-quiz-div {
+  width: 50%;
+  text-align: center;
+  border-left: 1px solid gainsboro;
+}
+.leadboard-score-div {
+  width: 50%;
+  text-align: center;
+  border-left: 1px solid gainsboro;
+}
+
+/* for mobile */
+@media only screen and (max-width: 800px) {
+  .leadboard-card-main-div {
+    width: 90%;
+    margin-top: 25%;
+  }
+  .leadboard-info-tag-div {
+    width: 90%;
+  }
+  .leadboard-user-score {
+    width: 90%;
+  }
+}
